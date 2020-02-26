@@ -1,0 +1,123 @@
+<!-- <article class="work-section"> -->
+  <!-- <div *ngFor="let work of works; let i = index" class="work-item">
+    <div *ngIf=" i < 4">
+      <img class="client-img" *ngIf="!webpSupported" [src]="work.imgUrlPng" alt="work image">
+      <img class="client-img" *ngIf="webpSupported" [src]="work.imgUrlWebp" alt="work image">
+      <div>
+        <div>{{work.client}}</div>
+        <p>{{work.workTitle}}</p>
+        <a href="#">
+          <p>View case</p>
+        </a>
+      </div>
+    </div>
+    <div *ngIf=" i >= 4 && i < 7">
+      <ng-container *ngIf="work.imgUrlPng || work.imgUrlWebp" class="vertical-orientation"> -->
+        <!-- <div class="wide-image"> -->
+          <!-- <img class="client-img" *ngIf="!webpSupported" [src]="work.imgUrlPng" alt="work image">
+          <img class="client-img" *ngIf="webpSupported" [src]="work.imgUrlWebp" alt="work image"> -->
+        <!-- </div> -->
+        <!-- <div>
+          <div>{{work.client}}</div>
+          <p>{{work.workTitle}}</p>
+          <a href="#">
+            <p>View case</p>
+          </a>
+        </div> -->
+      <!-- </ng-container>
+      <ng-container *ngIf="!work.imgUrlPng || !work.imgUrlWebp" class="vertical-orientation">
+        <hr>
+        <div>
+          <div>{{work.client}}</div>
+          <p>{{work.workTitle}}</p>
+          <a href="#">
+            <p>View case</p>
+          </a>
+        </div>
+        <hr>
+      </ng-container>
+
+    </div> -->
+    <!-- <div class="" *ngIf="!work.imgUrlPng || !work.imgUrlWebp">
+      <hr>
+      <div>{{work.client}}</div>
+      <p>{{work.workTitle}}</p>
+      <a href="#">
+        <p>View case</p>
+      </a>
+      <hr>
+    </div> -->
+
+  <!-- </div> -->
+
+  <!-- Quando nao tiver imagem -->
+
+  <!-- indexes 17 e 18 -->
+<!-- </article> -->
+
+<section>
+  <div class="container">
+
+    <!-- VERIFICAR ESTE APPROACH -->
+    <!-- <div class="container">
+      <div ngIf="condition1">
+      <div/>
+      <div ngIf="condition2">
+      <div/>
+      ...
+     </div> -->
+
+    <div class="row">
+      <div *ngFor="let work of works; let i = index" >
+        <div *ngIf="i < 4" class="col-md spacing">
+          <img class="client-img" *ngIf="!webpSupported" [src]="work.imgUrlPng" alt="work image">
+          <img class="client-img" *ngIf="webpSupported" [src]="work.imgUrlWebp" alt="work image">
+          <div>
+            <div>{{work.client}}</div>
+            <p>{{work.workTitle}}</p>
+            <a href="#">
+              <p>View case</p>
+            </a>
+          </div>
+        </div>
+        <div *ngIf="i === 4" class="col-md spacing">
+          <div *ngIf="work.imgUrlPng || work.imgUrlWebp">
+            <img class="client-img" *ngIf="!webpSupported" [src]="work.imgUrlPng" alt="work image">
+            <img class="client-img" *ngIf="webpSupported" [src]="work.imgUrlWebp" alt="work image">
+          </div>
+          <div>
+            <div>{{work.client}}</div>
+            <p>{{work.workTitle}}</p>
+            <a href="#">
+              <p>View case</p>
+            </a>
+          </div>
+        </div>
+
+        <!-- PARA AS SITUACOES ONDE TENS UM ARTIGO COM IMAGEM E DOIS SEM -->
+        <div *ngIf="i >= 5 && i <= 7" class="col-md">
+          <div class="d-flex flex-column">
+            <div>{{work.client}}</div>
+            <p>{{work.workTitle}}</p>
+            <a href="#">
+              <p>View case</p>
+            </a>
+          </div>
+        </div>
+        <div *ngIf="i > 7 && i < 9">
+          <img class="client-img" *ngIf="!webpSupported" [src]="work.imgUrlPng" alt="work image">
+          <img class="client-img" *ngIf="webpSupported" [src]="work.imgUrlWebp" alt="work image">
+          <div>
+            <div>{{work.client}}</div>
+            <p>{{work.workTitle}}</p>
+            <a href="#">
+              <p>View case</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <dept-testimonial></dept-testimonial>
+    <dept-clients></dept-clients>
+  </div>
+</section>

@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+/// fonts
+@import "./assets/fonts/fonts.scss";
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+* {
+  font-family: teko;
+  font-size: 14px;
+}
+
+.app-boundary {
+  margin: 10px 10px 0 10px;
+}
+
+.anchor-text {
+  text-transform: uppercase;;
+}
+
+h1 {
+  text-transform: uppercase;
+}

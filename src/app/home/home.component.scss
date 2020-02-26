@@ -1,0 +1,30 @@
+// @import "../../assets/fonts/fonts.scss";
+
+.home-section {
+  height: 100vh;
+
+  .home-img {
+    z-index: -1;
+    width: 100%;
+  }
+}
+
+
+
+.home-section-supports-webp {
+  background-image: url('../../assets/imgs/florensis.webp');
+  background-repeat: no-repeat;
+  z-index: -1;
+  width: 100%;
+  background-size: cover;
+}
+
+
+
+.home-section-does-supports-webp {
+  background-image: url('../../assets/imgs/florensis.png');
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+}
+

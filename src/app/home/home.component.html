@@ -1,0 +1,14 @@
+<article class="app-boundary">
+  <section class="home-section" [ngClass]="{'home-section-supports-webp': supportsWebP, 'home-section-does-supports-webp': !supportsWebP}">
+    <!-- <img class="home-img" [src]="'../../assets/imgs/florensis.' + imageFormat" alt=""> -->
+    <div class="left-side">
+      <h1>Work</h1>
+    </div>
+    <div class="right-side">
+      <button class="anchor-text">View Case</button>
+    </div>
+  </section>
+  <section>
+    <dept-work></dept-work>
+  </section>
+</article>
