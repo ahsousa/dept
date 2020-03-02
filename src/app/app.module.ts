@@ -8,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { HeaderNavComponent } from './core/components/header-nav/header-nav.component';
 import { FooterComponent } from './core/components/footer/footer.component';
 import { Error404Component } from './core/components/error404/error404.component';
@@ -27,7 +26,6 @@ import { FilterComponent } from './core/components/filter/filter.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     HeaderNavComponent,
     FooterComponent,
     Error404Component,
