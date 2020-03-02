@@ -1,52 +1,124 @@
-<div class="container">
+<div class="container-fluid sponsored-wrapper">
  <!-- First sponsored elements -->
  <div class="row d-flex">
-  <div class="col-sm-9 col-md-9 col-lg-9">
-    <div class="d-flex flex-column">
+  <div class="col-md-8 col-lg-7 non-responsive">
+    <div class="d-flex flex-column pad-left article-container">
       <ng-container *ngIf="firstBigArticle">
-        <img *ngIf="!webpSupported" [src]="firstBigArticle.imgUrlPng" alt="project picture">
-        <img *ngIf="webpSupported" [src]="firstBigArticle.imgUrlWebp" alt="project picture">
+        <img class="project-img" *ngIf="!webpSupported" [src]="firstBigArticle.imgUrlPng" alt="project picture">
+        <img class="project-img" *ngIf="webpSupported" [src]="firstBigArticle.imgUrlWebp" alt="project picture">
         <p>{{firstBigArticle.client}}</p>
-        <div>{{firstBigArticle.workTitle}}</div>
-        <div>View Case</div>
-      </ng-container>
-    </div>
-  </div>
-  <div class="col-sm-3 col-md-3 col-lg-3">
-    <div class="d-flex flex-column">
-      <ng-container *ngIf="firstSmallArticles">
-        <div *ngFor="let small of firstSmallArticles; let i = index" [class]="'small-article-container container-'+i">
-          <div>{{small.client}}</div>
-          <div>{{small.workTitle}}</div>
-          <div>View case </div>
+        <div class="work-title">{{firstBigArticle.workTitle}}</div>
+        <div class="work-title-mobile">
+          <a href="">{{firstBigArticle.workTitle}}</a>
+        </div>
+        <div class="project-redirect">
+          <span>
+            <img class="arrow-left" src="../../assets/imgs/icons/arrow-left.png" alt="">
+          </span>
+          <a href="">View Case</a>
         </div>
       </ng-container>
     </div>
   </div>
+  <div class="col-md-4 col-lg-3 non-responsive">
+    <div class="d-flex flex-column pad-right article-container">
+      <ng-container *ngIf="firstSmallArticles">
+        <div *ngFor="let small of firstSmallArticles; let i = index" [class]="'small-article-container container-'+i">
+          <p>{{small.client}}</p>
+          <div class="work-title">{{small.workTitle}}</div>
+          <div class="work-title-mobile">
+            <a href="">{{small.workTitle}}</a>
+          </div>
+          <div class="project-redirect">
+            <span>
+              <img class="arrow-left" src="../../assets/imgs/icons/arrow-left.png" alt="">
+            </span>
+            <a href="">View Case</a>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-12 responsive">
+    <div class="d-flex flex-column pad-right article-container">
+      <ng-container *ngIf="firstSmallArticles">
+        <div *ngFor="let small of firstSmallArticles; let i = index" [class]="'small-article-container container-'+i">
+          <p>{{small.client}}</p>
+          <div class="work-title">{{small.workTitle}}</div>
+          <div class="work-title-mobile">
+            <a href="">{{small.workTitle}}</a>
+          </div>
+          <div class="project-redirect">
+            <span>
+              <img class="arrow-left" src="../../assets/imgs/icons/arrow-left.png" alt="">
+            </span>
+            <a href="">View Case</a>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-12 responsive">
+    <div class="d-flex flex-column pad-left article-container">
+      <ng-container *ngIf="firstBigArticle">
+        <img class="project-img" *ngIf="!webpSupported" [src]="firstBigArticle.imgUrlPng" alt="project picture">
+        <img class="project-img" *ngIf="webpSupported" [src]="firstBigArticle.imgUrlWebp" alt="project picture">
+        <p>{{firstBigArticle.client}}</p>
+        <div class="work-title">{{firstBigArticle.workTitle}}</div>
+        <div class="work-title-mobile">
+          <a href="">{{firstBigArticle.workTitle}}</a>
+        </div>
+        <div class="project-redirect">
+          <span>
+            <img class="arrow-left" src="../../assets/imgs/icons/arrow-left.png" alt="">
+          </span>
+          <a href="">View Case</a>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
 </div>
 
 
 <!-- Second sponsored elements -->
 <div class="row d-flex">
-  <div class="col-sm-3 col-md-3 col-lg-3">
-    <div class="d-flex flex-column">
+  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+    <div class="d-flex flex-column pad-left article-container">
       <ng-container *ngIf="secondSmallArticles">
         <div *ngFor="let small of secondSmallArticles; let i = index" [class]="'small-article-container container-'+i">
-          <div>{{small.client}}</div>
-          <div>{{small.workTitle}}</div>
-          <div>View case </div>
+          <p>{{small.client}}</p>
+          <div class="work-title">{{small.workTitle}}</div>
+          <div class="work-title-mobile">
+            <a href="">{{small.workTitle}}</a>
+          </div>
+          <div class="project-redirect">
+            <span>
+              <img class="arrow-left" src="../../assets/imgs/icons/arrow-left.png" alt="">
+            </span>
+            <a href="">View Case</a>
+          </div>
         </div>
       </ng-container>
     </div>
   </div>
-  <div class="col-sm-9 col-md-9 col-lg-9">
-    <div class="d-flex flex-column">
+  <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 second-big-article">
+    <div class="d-flex flex-column pad-right article-container">
       <ng-container *ngIf="secondBigArticle">
-        <img *ngIf="!webpSupported" [src]="secondBigArticle.imgUrlPng" alt="project picture">
-        <img *ngIf="webpSupported" [src]="secondBigArticle.imgUrlWebp" alt="project picture">
+        <img class="project-img" *ngIf="!webpSupported" [src]="secondBigArticle.imgUrlPng" alt="project picture">
+        <img class="project-img" *ngIf="webpSupported" [src]="secondBigArticle.imgUrlWebp" alt="project picture">
         <p>{{secondBigArticle.client}}</p>
-        <div>{{secondBigArticle.workTitle}}</div>
-        <div>View Case</div>
+        <div class="work-title">{{secondBigArticle.workTitle}}</div>
+        <div class="work-title-mobile">
+          <a href="">{{secondBigArticle.workTitle}}</a>
+        </div>
+        <div class="project-redirect">
+          <span>
+            <img class="arrow-left" src="../../assets/imgs/icons/arrow-left.png" alt="">
+          </span>
+          <a href="">View Case</a>
+        </div>
       </ng-container>
     </div>
   </div>
