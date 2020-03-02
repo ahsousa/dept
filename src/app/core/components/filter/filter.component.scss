@@ -1,18 +1,46 @@
-.filter-container {
+.filter-wrapper {
   height: 150px;
 
-  span {
-    color: #939393;
-  }
-  select {
-    border: none;
-    border-bottom: 1px solid #000000;
-    background-color: transparent;
-    border-radius: 0px;
-    width: 100px;
-  }
+  .filter-container {
+    display: flex;
+    align-items: center;
 
-  .category-select {
-    margin-right: 15px;
+    span {
+      color: #939393;
+    }
+    select {
+      border: none;
+      border-bottom: 1px solid #000000;
+      background-color: transparent;
+      border-radius: 0px;
+      width: 100px;
+    }
+
+    .category-select {
+      margin-right: 15px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .filter-wrapper {
+    height: 75px;
+    margin-bottom: 35px;
+
+    .filter-container {
+      flex-direction: column;
+      align-items: start;
+      padding: 0px 45px;
+
+      .select-container{
+        span {
+          font-size: 2rem;
+        }
+
+        .industry-select {
+          width: 165px;
+        }
+      }
+    }
   }
 }

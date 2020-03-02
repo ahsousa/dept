@@ -1,16 +1,20 @@
 <div class="container">
-  <div class="row filter-container">
-    <div class=" col-xs-12 offset-sm-7 offset-md-7 offset-lg-7 col-sm-5 col-md-5 col-lg-5 d-flex align-items-center">
-      <span>Show me: </span>
-      <select class="category-select" id="category" (change)="filterCategory($event.target.value)">
-        <option selected value="all work">all work</option>
-        <option *ngFor="let category of categories" [value]="category">{{category}}</option>
-      </select>
-      <span> in </span>
-      <select id="industry" (change)="filterIndustry($event.target.value)">
-        <option selected value="all industries">all industries</option>
-        <option *ngFor="let industry of industries" [value]="industry">{{industry}}</option>
-      </select>
+  <div class="row filter-wrapper">
+    <div class="filter-container col-xs-12 offset-sm-5 offset-md-7 offset-lg-7 col-sm-7 col-md-5 col-lg-5">
+      <div class="select-container">
+        <span>Show me: </span>
+        <select class="category-select" id="category" (change)="filterCategory($event.target.value)">
+          <option selected value="all work">all work</option>
+          <option *ngFor="let category of categories" [value]="category">{{category}}</option>
+        </select>
+      </div>
+      <div class="select-container">
+        <span> in </span>
+        <select class="industry-select" id="industry" (change)="filterIndustry($event.target.value)">
+          <option selected value="all industries">all industries</option>
+          <option *ngFor="let industry of industries" [value]="industry">{{industry}}</option>
+        </select>
+      </div>
     </div>
   </div>
   <div *ngIf="isFiltered" class="row d-flex">
