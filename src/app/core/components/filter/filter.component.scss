@@ -1,0 +1,18 @@
+.filter-container {
+  height: 150px;
+
+  span {
+    color: #939393;
+  }
+  select {
+    border: none;
+    border-bottom: 1px solid #000000;
+    background-color: transparent;
+    border-radius: 0px;
+    width: 100px;
+  }
+
+  .category-select {
+    margin-right: 15px;
+  }
+}

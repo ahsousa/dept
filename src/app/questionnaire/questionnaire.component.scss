@@ -1,0 +1,60 @@
+.container {
+  margin-top: 80px;
+
+  input, textarea {
+    border: none;
+    border-bottom: 1px solid #979797;
+  }
+
+  p {
+    font-size: 3rem;
+    width: 70%;
+  }
+
+  .message-container {
+    margin-top: 80px;
+  }
+
+  .submit-btn {
+    width: 140px;
+    background-color: #1A18F7;
+    height: 50px;
+    color: #ffff;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-left: 15px;
+  }
+
+  .submit-btn:disabled {
+    background-color: #979797;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+
+    .text-container {
+      text-align: center;
+      p {
+        width: 100%;
+      }
+    }
+
+    .email-container {
+      margin-top: 30px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    margin-top: 40px;
+    .text-container {
+      p {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+

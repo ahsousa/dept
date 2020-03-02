@@ -1,1 +1,21 @@
-<p>clients works!</p>
+<div class="container-fluid">
+  <div class="row clients-bg">
+    <h1>Clients</h1>
+    <div class="manifest">
+      We value a great working relationship with our clients above all else. It’s why they often come to our parties. It’s also why we’re able to challenge and inspire them to reach for the stars.
+    </div>
+    <div class="logo-wrapper">
+      <ng-container *ngIf="!webpSupported">
+        <div *ngFor="let logo of logos; let i = index" class="logo-container">
+          <img [class]="'icon-'+ i" [src]="logo.url + '.png'" alt="client logo">
+        </div>
+      </ng-container>
+      <ng-container *ngIf="webpSupported">
+        <div *ngFor="let logo of logos; let i = index" class="logo-container">
+          <img [class]="'icon-'+ i" [src]="logo.url + '.webp'" alt="client logo">
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+

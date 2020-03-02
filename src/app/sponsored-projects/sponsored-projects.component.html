@@ -1,0 +1,54 @@
+<div class="container">
+ <!-- First sponsored elements -->
+ <div class="row d-flex">
+  <div class="col-sm-9 col-md-9 col-lg-9">
+    <div class="d-flex flex-column">
+      <ng-container *ngIf="firstBigArticle">
+        <img *ngIf="!webpSupported" [src]="firstBigArticle.imgUrlPng" alt="project picture">
+        <img *ngIf="webpSupported" [src]="firstBigArticle.imgUrlWebp" alt="project picture">
+        <p>{{firstBigArticle.client}}</p>
+        <div>{{firstBigArticle.workTitle}}</div>
+        <div>View Case</div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="col-sm-3 col-md-3 col-lg-3">
+    <div class="d-flex flex-column">
+      <ng-container *ngIf="firstSmallArticles">
+        <div *ngFor="let small of firstSmallArticles; let i = index" [class]="'small-article-container container-'+i">
+          <div>{{small.client}}</div>
+          <div>{{small.workTitle}}</div>
+          <div>View case </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+
+<!-- Second sponsored elements -->
+<div class="row d-flex">
+  <div class="col-sm-3 col-md-3 col-lg-3">
+    <div class="d-flex flex-column">
+      <ng-container *ngIf="secondSmallArticles">
+        <div *ngFor="let small of secondSmallArticles; let i = index" [class]="'small-article-container container-'+i">
+          <div>{{small.client}}</div>
+          <div>{{small.workTitle}}</div>
+          <div>View case </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="col-sm-9 col-md-9 col-lg-9">
+    <div class="d-flex flex-column">
+      <ng-container *ngIf="secondBigArticle">
+        <img *ngIf="!webpSupported" [src]="secondBigArticle.imgUrlPng" alt="project picture">
+        <img *ngIf="webpSupported" [src]="secondBigArticle.imgUrlWebp" alt="project picture">
+        <p>{{secondBigArticle.client}}</p>
+        <div>{{secondBigArticle.workTitle}}</div>
+        <div>View Case</div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+</div>

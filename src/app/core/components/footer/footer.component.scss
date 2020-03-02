@@ -1,0 +1,133 @@
+.container-fluid {
+  margin-top: 80px;
+
+  .dept-data-container {
+    background-color: black;
+    padding: 100px 0;
+
+    .dept-links {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #979797;
+
+      .footer-links {
+        margin-top: 10px;
+        a {
+          text-decoration: none;
+          color: white;
+          padding: 0 10px 0 10px;
+          text-transform: uppercase;
+        }
+
+        a:hover {
+          border-bottom: 1px solid #979797;
+          width: 104%;
+        }
+      }
+    }
+
+    .no-pad {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .footer-social {
+      margin-top: 10px;
+
+      a {
+        padding-left: 20px;
+      }
+    }
+
+    .legal-wrapper {
+      padding-top: 30px;
+
+      .legal-container {
+        p {
+          margin-right: 20px;
+          color: #979797;
+        }
+
+        a {
+          color: #979797;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .scroller-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      cursor: pointer;
+
+      .arrow-pointer {
+        width: 90%;
+      }
+
+      .arrow-body {
+        width: 17%;
+        position: relative;
+        left: 6px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .container-fluid {
+    .dept-data-container {
+      padding: 30px;
+      .dept-links {
+        display: flex;
+
+        .dept-logo {
+          display: none;
+        }
+
+        .footer-links {
+          display: flex;
+          flex-direction: column;
+          width: 90%;
+
+          a {
+            font-size: 1.5rem;
+            padding-left: 0;
+          }
+        }
+
+        .footer-social {
+          display: flex;
+          flex-direction: column;
+          width: 10%;
+
+          a {
+            padding: 5px 5px 5px 10px;
+          }
+        }
+      }
+
+      .legal-wrapper {
+        .legal-container {
+          flex-direction: column;
+
+          div {
+            flex-direction: column;
+            margin-bottom: 20px;
+            p {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+    .scroller-container {
+      display: none;
+    }
+  }
+}

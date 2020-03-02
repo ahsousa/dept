@@ -1,14 +1,18 @@
-<article class="app-boundary">
-  <section class="home-section" [ngClass]="{'home-section-supports-webp': supportsWebP, 'home-section-does-supports-webp': !supportsWebP}">
-    <!-- <img class="home-img" [src]="'../../assets/imgs/florensis.' + imageFormat" alt=""> -->
-    <div class="left-side">
+<section>
+  <div class="big-article-container d-flex row" [ngClass]="{'home-section-supports-webp': supportsWebP, 'home-section-does-supports-webp': !supportsWebP}">
+    <div class="text-wrapper col-xs-12 col-sm-12 col-md-6 col-lg-6">
       <h1>Work</h1>
     </div>
-    <div class="right-side">
-      <button class="anchor-text">View Case</button>
+    <div class="btn-wrapper col-xs-12 col-sm-12 col-md-6 col-lg-6 align-self-end justify-content-end">
+      <button class="anchor-btn">View Case</button>
     </div>
-  </section>
-  <section>
-    <dept-work></dept-work>
-  </section>
-</article>
+  </div>
+  <div class="container mobile-section">
+    <div class="row">
+      <button class="col-xs-12 anchor-btn-mobile">View Case</button>
+    </div>
+  </div>
+</section>
+<section>
+  <dept-work></dept-work>
+</section>

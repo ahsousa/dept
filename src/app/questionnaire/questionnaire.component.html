@@ -1,1 +1,49 @@
-<p>questionnaire works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 text-container">
+      <p>QUESTION? WE ARE HERE TO HELP!</p>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 d-flex flex-column">
+            <label for="">Name</label>
+            <input
+              formControlName="nameField"
+              type="text">
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 d-flex flex-column email-container">
+            <label for="">Email</label>
+            <input
+              formControlName="emailField"
+              type="text">
+
+            <!-- Alert for email  -->
+
+            <div *ngIf="email.invalid">
+              <small *ngIf="email.errors?.required" class="text-danger">This field is required</small>
+            </div>
+            <div *ngIf="(email.invalid && email.touched) || email.dirty">
+              <small *ngIf="email.errors?.pattern" class="text-danger">Please provide a valid email address</small>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 d-flex flex-column message-container">
+            <label for="">Message</label>
+            <textarea
+              formControlName="messageField"
+              id="exampleFormControlTextarea1"
+              rows="3"></textarea>
+            <div *ngIf="message.invalid">
+              <small *ngIf="message.errors?.required" class="text-danger">Message is required</small>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <button [disabled]="email.invalid || message.invalid" class="submit-btn" type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

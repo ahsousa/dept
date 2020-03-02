@@ -1,1 +1,41 @@
-<p>footer works!</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-11 col-md-11 col-lg-11 dept-data-container">
+      <div class="offset-sm-1 offset-md-1 offset-lg-1 col-xs-12 col-sm-9 col-md-9 col-lg-9 d-flex justify-content-between dept-links no-pad">
+        <div class="dept-logo">
+          <img [src]="'../../../../assets/imgs/dept_logo.' + imgFormat" alt="dept logo">
+        </div>
+        <div class="footer-links">
+          <a *ngFor="let link of footerLinks" [routerLink]="[link.url]">{{link.name}}</a>
+        </div>
+        <div class="footer-social">
+          <ng-container *ngFor="let social of socialMedia">
+            <a [href]="social.mediaUrl">
+              <img [src]="social.url" alt="social media logo">
+            </a>
+          </ng-container>
+        </div>
+      </div>
+      <div class="offset-sm-1 offset-md-1 offset-lg-1 col-xs-12 col-sm-9 col-md-9 col-lg-9 d-flex  legal-wrapper no-pad">
+        <div class="offset-md-1 offset-lg-3 col-xs-12 col-sm-12 col-md-11 col-lg-9 d-flex justify-content-between no-pad legal-container">
+          <div class="d-flex">
+            <p>Chamber of Commerce: 63464101</p>
+            <p>VAT: NL 8552.47.502.B01</p>
+            <a href="#">Terms and conditions</a>
+          </div>
+          <div>
+            <p>&#169; {{currentYear}} Dept Agency</p>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+    <div class="col-sm-1 col-md-1 col-lg-1 scroller-container">
+      <div (click)="scrollTop()">
+        <img class="arrow-pointer" src="../../../../assets/imgs/icons/Path 2 Copy 3.png" alt="triangle">
+        <img class="arrow-body" src="../../../../assets/imgs/icons/Rectangle 8.png" alt="rectangle">
+        TOP
+      </div>
+    </div>
+  </div>
+</div>

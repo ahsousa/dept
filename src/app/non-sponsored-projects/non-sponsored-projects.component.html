@@ -1,0 +1,76 @@
+<div class="container-fluid">
+  <div class="row non-sponsored-wrapper">
+    <ng-container *ngIf="firstArticles">
+      <div *ngFor="let article of firstArticles" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 d-flex flex-column project-wrapper" >
+        <img class="justify-content-center" *ngIf="webpSupported" [src]="article.imgUrlWebp" alt="project pic">
+        <img class="justify-content-center" *ngIf="!webpSupported" [src]="article.imgUrlPng" alt="project pic">
+        <p>{{article.client}}</p>
+        <div class="work-title">{{article.workTitle}}</div>
+        <div class="work-title-mobile">
+          <a href="">{{article.workTitle}}</a>
+        </div>
+        <div class="project-redirect">
+          <span>
+            <img class="arrow-left" src="../../assets/imgs/icons/arrow-left.png" alt="">
+          </span>
+          <a href="">View Case</a>
+        </div>
+
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="secondArticles">
+      <div *ngFor="let article of secondArticles" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 d-flex flex-column project-wrapper" >
+        <img *ngIf="webpSupported" [src]="article.imgUrlWebp" alt="project pic">
+        <img *ngIf="!webpSupported" [src]="article.imgUrlPng" alt="project pic">
+        <p>{{article.client}}</p>
+        <div class="work-title">{{article.workTitle}}</div>
+        <div class="work-title-mobile">
+          <a href="">{{article.workTitle}}</a>
+        </div>
+        <div class="project-redirect">
+          <span>
+            <img class="arrow-left" src="../../assets/imgs/icons/arrow-left.png" alt="">
+          </span>
+          <a href="">View Case</a>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="firstDoubleArticles">
+      <div *ngFor="let article of firstDoubleArticles" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 d-flex flex-column project-wrapper" >
+        <img *ngIf="webpSupported" [src]="article.imgUrlWebp" alt="project pic">
+        <img *ngIf="!webpSupported" [src]="article.imgUrlPng" alt="project pic">
+        <p>{{article.client}}</p>
+        <div class="work-title">{{article.workTitle}}</div>
+        <div class="work-title-mobile">
+          <a href="">{{article.workTitle}}</a>
+        </div>
+        <div class="project-redirect">
+          <span>
+            <img class="arrow-left" src="../../assets/imgs/icons/arrow-left.png" alt="">
+          </span>
+          <a href="">View Case</a>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="secondDoubleArticles">
+      <div *ngFor="let article of secondDoubleArticles" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 d-flex flex-column project-wrapper" >
+        <img *ngIf="webpSupported" [src]="article.imgUrlWebp" alt="project pic">
+        <img *ngIf="!webpSupported" [src]="article.imgUrlPng" alt="project pic">
+        <p>{{article.client}}</p>
+        <div class="work-title">{{article.workTitle}}</div>
+        <div class="work-title-mobile">
+          <a href="">{{article.workTitle}}</a>
+        </div>
+        <div class="project-redirect">
+          <span>
+            <img class="arrow-left" src="../../assets/imgs/icons/arrow-left.png" alt="">
+          </span>
+          <a href="">View Case</a>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

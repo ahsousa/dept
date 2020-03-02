@@ -6,7 +6,10 @@
     "imgUrlPng": "../assets/imgs/bolcom.png",
     "imgUrlWebp": "../assets/imgs/bolcom.webp",
     "industry": "tourism",
-    "sponsored": false
+    "category": "marketing",
+    "sponsored": false,
+    "type": "fourple",
+    "position": 1
   },
   {
     "id": 2,
@@ -15,7 +18,10 @@
     "imgUrlPng": "../assets/imgs/kempen.png",
     "imgUrlWebp": "../assets/imgs/kempen.webp",
     "industry": "IT",
-    "sponsored": false
+    "category": "design",
+    "sponsored": false,
+    "type": "fourple",
+    "position": 1
   },
   {
     "id": 3,
@@ -24,7 +30,10 @@
     "imgUrlPng": "../assets/imgs/philips.png",
     "imgUrlWebp": "../assets/imgs/philips.webp",
     "industry": "consumables",
-    "sponsored": false
+    "category": "design",
+    "sponsored": false,
+    "type": "fourple",
+    "position": 1
   },
   {
     "id": 4,
@@ -33,7 +42,10 @@
     "imgUrlPng": "../assets/imgs/gemeentemuseum.png",
     "imgUrlWebp": "../assets/imgs/gemeentemuseum.webp",
     "industry": "culture",
-    "sponsored": false
+    "category": "advertising",
+    "sponsored": false,
+    "type": "fourple",
+    "position": 1
   },
   {
     "id": 5,
@@ -42,19 +54,30 @@
     "imgUrlPng": "../assets/imgs/florensis.png",
     "imgUrlWebp": "../assets/imgs/florensis.webp",
     "industry": "IT",
-    "sponsored": true
+    "category": "strategy",
+    "sponsored": true,
+    "type": "triple",
+    "position": 1
   },
   {
     "id": 6,
     "workTitle": "Tapping into Ireland’s unique gaming culture and bringing a fresh flavour to their Xbox social media channels",
     "client": "Microsoft",
-    "industry": "IT"
+    "industry": "IT",
+    "category":"social media",
+    "sponsored": true,
+    "type": "triple",
+    "position": 1
   },
   {
     "id": 7,
     "workTitle": "Integrating existing content into O’Neill’s new e-commerce platform",
     "client": "o'neill",
-    "industry": "clothing"
+    "industry": "clothing",
+    "category": "e-commerce",
+    "sponsored": true,
+    "type": "triple",
+    "position": 1
   },
   {
     "id": 8,
@@ -63,7 +86,10 @@
     "imgUrlPng": "../assets/imgs/lightning.png",
     "imgUrlWebp": "../assets/imgs/lightning.webp",
     "industry": "IT",
-    "sponsored": true
+    "category": "branding",
+    "sponsored": false,
+    "type": "double",
+    "position": 1
   },
   {
     "id": 9,
@@ -71,22 +97,31 @@
     "client": "tui",
     "imgUrlPng": "../assets/imgs/tui.png",
     "imgUrlWebp": "../assets/imgs/tui.webp",
-    "industry": "IT",
-    "sponsored": true
+    "industry": "tourism",
+    "category":"technology",
+    "sponsored": false,
+    "type": "double",
+    "position": 1
   },
   {
     "id": 10,
     "workTitle": "Enhancing customer experience for personalised holiday planning using real time data",
     "client": "butlins",
     "industry": "tourism",
-    "sponsored": false
+    "category":"technology",
+    "sponsored": true,
+    "type": "triple",
+    "position": 2
   },
   {
     "id":11,
     "workTitle": "Predicting booking behavior for holidays with smart data, voice search and machine learning",
     "client": "vacanselect",
     "industry": "IT",
-    "sponsored": false
+    "category": "data & intelligence",
+    "sponsored": true,
+    "type": "triple",
+    "position": 2
   },
   {
     "id": 12,
@@ -95,7 +130,10 @@
     "imgUrlPng": "../assets/imgs/florensis.png",
     "imgUrlWebp": "../assets/imgs/florensis.webp",
     "industry": "IT",
-    "sponsored": true
+    "category": "strategy",
+    "sponsored": true,
+    "type": "triple",
+    "position": 2
   },
   {
     "id": 13,
@@ -104,7 +142,10 @@
     "imgUrlPng": "../assets/imgs/chocomel.png",
     "imgUrlWebp": "../assets/imgs/chocomel.webp",
     "industry": "consumables",
-    "sponsored": false
+    "category":"advertising",
+    "sponsored": false,
+    "type": "fourple",
+    "position": 2
   },
   {
     "id":14,
@@ -113,7 +154,10 @@
     "imgUrlPng": "../assets/imgs/jbl.png",
     "imgUrlWebp": "../assets/imgs/jbl.webp",
     "industry": "IT",
-    "sponsored": false
+    "category":"advertising",
+    "sponsored": false,
+    "type": "fourple",
+    "position": 2
   },
   {
     "id": 15,
@@ -122,7 +166,10 @@
     "imgUrlPng": "../assets/imgs/zalando.png",
     "imgUrlWebp": "../assets/imgs/zalando.webp",
     "industry": "IT",
-    "sponsored": false
+    "category": "social media",
+    "sponsored": false,
+    "type": "fourple",
+    "position": 2
   },
   {
     "id": 16,
@@ -131,7 +178,10 @@
     "imgUrlPng": "../assets/imgs/koninklijke-bibliotheek.png",
     "imgUrlWebp": "../assets/imgs/koninklijke-bibliotheek.webp",
     "industry": "culture",
-    "sponsored": false
+    "category":"advertising",
+    "sponsored": false,
+    "type": "fourple",
+    "position": 2
   },
   {
     "id": 17,
@@ -140,15 +190,21 @@
     "imgUrlPng": "../assets/imgs/liberty-global.png",
     "imgUrlWebp": "../assets/imgs/liberty-global.webp",
     "industry": "IT",
-    "sponsored": false
+    "category":"e-commerce",
+    "sponsored": false,
+    "type": "double",
+    "position": 2
   },
   {
     "id": 18,
     "workTitle": "Swipe to find your next holiday destination",
     "client": "Arla",
     "imgUrlPng": "../assets/imgs/arla.png",
-    "imgUrlWebp": "../assets/imgs/arla  .webp",
-    "industry": "consumables",
-    "sponsored": false
+    "imgUrlWebp": "../assets/imgs/arla.webp",
+    "industry": "tourism",
+    "category": "technology",
+    "sponsored": false,
+    "type": "double",
+    "position": 2
   }
 ]
