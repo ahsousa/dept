@@ -1,15 +1,63 @@
 <section>
-  <div class="big-article-container d-flex row" [ngClass]="{'home-section-supports-webp': supportsWebP, 'home-section-does-supports-webp': !supportsWebP}">
-    <div class="text-wrapper col-xs-12 col-sm-12 col-md-6 col-lg-6">
-      <h1>Work</h1>
-    </div>
-    <div class="btn-wrapper col-xs-12 col-sm-12 col-md-6 col-lg-6 align-self-end justify-content-end">
-      <button class="anchor-btn">View Case</button>
+<!-- WHEN OPENED -->
+  <div>
+    <div class="row" >
+      <div class="d-flex header-trigger justify-content-between col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="logo-container">
+          <img *ngIf="!supportsWebP" src="../../../../assets/imgs/dept_logo_black.png" alt="dept logo">
+          <img *ngIf="supportsWebP" src="../../../../assets/imgs/dept_logo_black.webp" alt="dept logo">
+        </div>
+        <div>
+          <span>Menu</span>
+          <button type="button" class="header-menu">
+            <svg height="30" width="30">
+              <rect height="2" width="30"></rect>
+              <rect height="2" width="30"></rect>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="container mobile-section">
-    <div class="row">
-      <button class="col-xs-12 anchor-btn-mobile">View Case</button>
+
+  <!-- WHEN CLOSED -->
+  <div>
+    <div class="big-article-container row" [ngClass]="{'home-section-supports-webp': supportsWebP, 'home-section-does-supports-webp': !supportsWebP}">
+      <div class="d-flex header-trigger justify-content-between col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="logo-container">
+          <img *ngIf="!supportsWebP" src="../../../../assets/imgs/dept_logo_black.png" alt="dept logo">
+          <img *ngIf="supportsWebP" src="../../../../assets/imgs/dept_logo_black.webp" alt="dept logo">
+        </div>
+        <div class="d-flex">
+          <span>Menu</span>
+          <div type="button" class="header-menu">
+            <!-- <svg height="30" width="30"> -->
+              <!-- <rect height="2" width="30" x="0" y="14" transform='rotate(45 140 105)'></rect>
+              <rect height="2" width="30" x="0" y="14"></rect> -->
+              <div class="d-flex flex-column" (click)="openMenu()">
+                <svg height="10" width="25">
+                  <line x1="0" y1="0" x2="200" y2="0" style="stroke:rgb(0,0,0);stroke-width:2" />
+                </svg>
+                <svg height="10" width="25">
+                  <line x1="0" y1="0" x2="200" y2="0" class="menu" [ngClass]="{'active': menuOpened}" style="stroke:rgb(0,0,0);stroke-width:2" />
+                </svg>
+              </div>
+            <!-- </svg> -->
+          </div>
+        </div>
+      </div>
+      <div class="text-wrapper col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <h1>Work</h1>
+      </div>
+      <div class="btn-wrapper col-xs-12 col-sm-12 col-md-6 col-lg-6 align-self-end justify-content-end">
+        <button class="anchor-btn">View Case</button>
+      </div>
+    </div>
+    <div class="container mobile-section">
+      <div class="row">
+        <button class="col-xs-12 anchor-btn-mobile">View Case</button>
+      </div>
     </div>
   </div>
+
 </section>
